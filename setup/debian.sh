@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Update and install basic packages
-apt update -y && apt upgrade -y
-apt install zsh zplug net-tools -y
+sudo apt update -y && sudo apt upgrade -y
+sudo apt install zsh zplug net-tools -y
 
 # Install oh-my-zsh & plugins
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
