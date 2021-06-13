@@ -17,20 +17,8 @@ My repo to setup OS and dotfiles on Linux, MacOS etc
     sudo apt update -y && sudo apt install git curl -y
     ```
 
-2. Clone repo
+2. Run initiation script
 
     ```bash
-    git clone https://github.com/alec-hs/dotfiles ~/.dotfiles
-    ```
-
-3. Make relevant setup file executable
-
-    ```bash
-    chmod +x ~/.dotfiles/setup/debian.sh
-    ```
-
-4. Run setup file
-
-    ```bash
-    ~/.dotfiles/setup/debian.sh
+    bash <(curl -fsSL https://raw.githubusercontent.com/alec-hs/dotfiles/main/run-once.sh)
     ```
