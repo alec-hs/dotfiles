@@ -13,9 +13,12 @@ git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugi
 git clone https://github.com/supercrabtree/k ~/.oh-my-zsh/custom/plugins/k
 
 # Delete exsting dotfiles
-rm ~/.zshrc
-rm ~/.p10k.zsh
+rm -f ~/.zshrc
+rm -f ~/.p10k.zsh
 
 # Create Symlinks
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
+
+# Set default shell
+chsh -s $(which zsh)
