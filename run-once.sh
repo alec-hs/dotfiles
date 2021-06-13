@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Update and install dependencies
-sudo apt update -y && sudo apt upgrade -y && sudo apt install git curl -y
+sudo apt update -y
+sudo apt upgrade -y 
+sudo apt install git curl -y
 
 # Clone repo
 git clone https://github.com/alec-hs/dotfiles ~/.dotfiles
