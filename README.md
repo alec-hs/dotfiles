@@ -8,7 +8,7 @@ My repo to setup OS and dotfiles on Linux, MacOS etc
 
 - git
 - curl
-- [firacode font](https://github.com/tonsky/FiraCode/wiki/Installing)
+- [nerd font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraMono)
 
 ## Install
 
