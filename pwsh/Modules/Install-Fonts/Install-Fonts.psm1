@@ -97,4 +97,5 @@ Function Install-FontsFromDir {
   }
 }
 
-
+Export-ModuleMember -Function Install-Font
+Export-ModuleMember -Function Install-FontsFromDir

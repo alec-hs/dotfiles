@@ -8,8 +8,8 @@ Function Remove-ItemSafely {
 
 Function grep($regex, $dir) {
   if ( $dir ) {
-          Get-ChildItem $dir | select-string $regex
-          return
+    Get-ChildItem $dir | select-string $regex
+    return
   }
   $input | select-string $regex
 }
@@ -17,3 +17,7 @@ Function grep($regex, $dir) {
 Function touch($file) {
   "" | Out-File $file -Encoding ASCII
 }
+
+Export-ModuleMember -Function Remove-ItemSafely
+Export-ModuleMember -Function grep
+Export-ModuleMember -Function touch
