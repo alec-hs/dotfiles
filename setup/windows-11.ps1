@@ -27,11 +27,8 @@ Remove-ItemSafely ~\Documents\PowerShell
 cmd /c mklink /J %homepath%\Documents\WindowsPowerShell\ %homepath%\.dotfiles\pwsh
 cmd /c mklink /J %homepath%\Documents\PowerShell\ %homepath%\.dotfiles\pwsh
 
-# Create new profile
-New-Item -Path $Profile -Type File -Force
-
 # Windows Terminal Config Setup
-Remove-ItemSafely ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
-cmd /c mklink /h %homepath%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json %homepath%\.dotfiles\windows-terminal\settings.json
-Remove-ItemSafely ~\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json
-cmd /c mklink /h %homepath%\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json %homepath%\.dotfiles\windows-terminal\settings.json
+#Remove-ItemSafely ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+#cmd /c mklink /h %homepath%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json %homepath%\.dotfiles\windows-terminal\settings.json
+#Remove-ItemSafely ~\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json
+#cmd /c mklink /h %homepath%\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json %homepath%\.dotfiles\windows-terminal\settings.json
