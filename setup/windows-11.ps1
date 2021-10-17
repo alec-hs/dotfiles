@@ -3,8 +3,8 @@
 #------------------------------#
 
 # Add needed modules
-Import-Module ".\pwsh\modules\coreFunctions.psm1"
-Import-Module ".\pwsh\modules\installFonts.psm1"
+Import-Module ".\pwsh\Modules\Core-Functions\Core-Functions.psm1"
+Import-Module ".\pwsh\modules\Install-Fonts\Install-Fonts.psm1"
 
 # Hide .dotfiles folder
 Get-Item "~\.dotfiles" -Force | ForEach-Object {$_.Attributes = $_.Attributes -bor [System.IO.FileAttributes]::Hidden}
