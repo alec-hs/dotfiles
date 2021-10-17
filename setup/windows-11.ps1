@@ -29,7 +29,7 @@ cmd /c mklink /J %homepath%\Documents\WindowsPowerShell\ %homepath%\.dotfiles\pw
 cmd /c mklink /J %homepath%\Documents\PowerShell\ %homepath%\.dotfiles\pwsh
 
 # Create new profile
-New-Item –Path $Profile –Type File –Force
+New-Item -Path $Profile -Type File -Force
 
 # Windows Terminal Config Setup
 Remove-ItemSafely ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
