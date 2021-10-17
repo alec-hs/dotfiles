@@ -2,4 +2,5 @@
 git clone https://github.com/alec-hs/dotfiles $HOME\.dotfiles
 
 # Run setup
-powershell ~/.dotfiles/setup/windows11.ps1
+Set-Location $HOME\.dotfiles
+.\setup\windows-11.ps1
