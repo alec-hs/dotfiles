@@ -2,15 +2,16 @@
 
 ## Intro
 
-My repo to setup OS and dotfiles on Linux, MacOS etc
+My repo to setup OS and dotfiles on Linux, MacOS & Windows
 
 ## Requirements
 
-- git
-- curl
-- [nerd font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraMono)
+- git (all)
+- curl (linux & macos)
+- [nerd font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraMono) (all)
+- powershell (windows)
 
-## Install
+## Install (Linux)
 
 1. Make sure git and curl are installed
 
@@ -22,4 +23,13 @@ My repo to setup OS and dotfiles on Linux, MacOS etc
 
     ```bash
     bash <(curl -fsSL https://raw.githubusercontent.com/alec-hs/dotfiles/main/run-once.sh)
+    ```
+
+## Install (Windows)
+
+1. Make sure git and powershell are installed
+2. Run initiation script
+
+    ```powershell
+    iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/alec-hs/dotfiles/main/run-once.ps1'))
     ```
