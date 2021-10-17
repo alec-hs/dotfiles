@@ -22,14 +22,21 @@ My repo to setup OS and dotfiles on Linux, MacOS & Windows
 2. Run initiation script
 
     ```bash
-    bash <(curl -fsSL https://raw.githubusercontent.com/alec-hs/dotfiles/main/run-once.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/alec-hs/dotfiles/main/runOnce.sh)
     ```
 
 ## Install (Windows)
 
 1. Make sure git and powershell are installed
-2. Run initiation script
+2. Open Powershell as Admin
+3. Execute
 
     ```powershell
-    iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/alec-hs/dotfiles/main/run-once.ps1'))
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+    ```
+
+4. Run initiation script
+
+    ```powershell
+    iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/alec-hs/dotfiles/main/runOnce.ps1'))
     ```
