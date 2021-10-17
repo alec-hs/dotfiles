@@ -1,7 +1,6 @@
 Function Remove-ItemSafely {
     param(
         [Parameter(Mandatory = $true)]
-        [ValidateNotNullOrEmpty]
         [string]
         $path
     )
@@ -20,8 +19,8 @@ Expand-Archive -LiteralPath 'C:\Temp\FiraCode.zip' -DestinationPath C:\Temp\Font
 Remove-ItemSafely C:\Temp\FiraCode.zip
 
 # Delete exising profiles
-Remove-ItemSafely "~\Documents\WindowsPowerShell"
-Remove-ItemSafely "~\Documents\PowerShell"
+Remove-ItemSafely ~\Documents\WindowsPowerShell
+Remove-ItemSafely ~\Documents\PowerShell
 
 
 # Symlink profile to locations
