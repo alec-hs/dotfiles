@@ -3,11 +3,8 @@
 #------------------------------#
 
 # Add needed modules
-Import-Module ".\pwsh\Modules\Core-Functions\Core-Functions.psm1"
-Import-Module ".\pwsh\modules\Install-Fonts\Install-Fonts.psm1"
-
-# Hide .dotfiles folder
-Get-Item "~\.dotfiles" -Force | ForEach-Object {$_.Attributes = $_.Attributes -bor [System.IO.FileAttributes]::Hidden}
+Import-Module "~\.dotfiles\pwsh\Modules\Core-Functions\Core-Functions.psm1"
+Import-Module "~\.dotfiles\pwsh\Modules\Core-Functions\Core-Functions.psm1"
 
 
 #------------------------------#
@@ -39,9 +36,12 @@ Remove-ItemSafely C:\Temp\FiraCode.zip
 Remove-ItemSafely ~\Documents\WindowsPowerShell
 Remove-ItemSafely ~\Documents\PowerShell
 
+# Get My Documents location 
+$docs = [Environment]::GetFolderPath('MyDocuments')
+
 # Symlink profile to locations
-cmd /c mklink /J %homepath%\Documents\WindowsPowerShell\ %homepath%\.dotfiles\pwsh
-cmd /c mklink /J %homepath%\Documents\PowerShell\ %homepath%\.dotfiles\pwsh
+New-Item -ItemType Junction -Path "$docs\WindowsPowerShell\" -Target (Get-Item '~\.dotfiles\pwsh').FullName
+New-Item -ItemType Junction -Path "$docs\PowerShell\" -Target (Get-Item '~\.dotfiles\pwsh').FullName
 
 
 #------------------------------#
@@ -49,5 +49,5 @@ cmd /c mklink /J %homepath%\Documents\PowerShell\ %homepath%\.dotfiles\pwsh
 #------------------------------#
 $aws = "~\.aws"
 Remove-ItemSafely $aws
-cmd /c mklink /J %homepath%\.aws\ %homepath%\.dotfiles\aws
+New-Item -ItemType Junction -Path "~\.aws\" -Target (Get-Item '~\.dotfiles\aws').FullName
 Get-Item $aws -Force | ForEach-Object {$_.Attributes = $_.Attributes -bor [System.IO.FileAttributes]::Hidden}
