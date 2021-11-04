@@ -1,0 +1,13 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = alec-hs
+	email = 6503411+alec-hs@users.noreply.github.com
+	signingkey = 54ABFB9DE955FE9C69CDEB0F02C0E4987ACBC559
+[gpg]
+	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
+[commit]
+	gpgsign = true
