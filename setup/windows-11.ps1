@@ -15,17 +15,16 @@ Import-Module "~\.dotfiles\pwsh\Modules\Core-Functions\Core-Functions.psm1"
 winget install JanDeDobbeleer.OhMyPosh
 
 # Install fonts
-$dir = "C:\Temp\Fonts"
-If(!(test-path "C:\Temp")) {New-Item -ItemType Directory -Force -Path "C:\Temp"}
-Start-BitsTransfer "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip" C:\Temp\FiraCode.zip
-Expand-Archive -Path C:\Temp\FiraCode.zip -DestinationPath $dir 
+$dir = "~\Downloads\Fonts"
+If(!(test-path $dir)) {New-Item -ItemType Directory -Force -Path $dir}
+Start-BitsTransfer "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip" $dir\FiraCode.zip
+Expand-Archive -Path $dir\FiraCode.zip -DestinationPath $dir 
 Get-ChildItem -Path $dir  *.ttf | ForEach-Object { Remove-Item -Path $_.FullName }
 Get-ChildItem -Path $dir  Fura* | ForEach-Object { Remove-Item -Path $_.FullName }
 Get-ChildItem -Path $dir  *Mono* | ForEach-Object { Remove-Item -Path $_.FullName }
 Get-ChildItem -Path $dir  -Exclude "*Windows Compatible.otf" | ForEach-Object { Remove-Item -Path $_.FullName }
 Install-FontsFromDir $dir
 Remove-ItemSafely $dir
-Remove-ItemSafely C:\Temp\FiraCode.zip
 
 
 #------------------------------#
