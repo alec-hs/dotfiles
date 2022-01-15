@@ -18,6 +18,11 @@ Function touch($file) {
   "" | Out-File $file -Encoding ASCII
 }
 
+Function wgs([string]$searchTerm) {
+  winget search $searchTerm
+}
+
 Export-ModuleMember -Function Remove-ItemSafely
 Export-ModuleMember -Function grep
 Export-ModuleMember -Function touch
+Export-ModuleMember -Function wgs
