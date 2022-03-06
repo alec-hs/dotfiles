@@ -22,3 +22,4 @@ Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 # My Aliases 
 New-Alias open Invoke-Item
+New-Alias tf terraform
