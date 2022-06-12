@@ -6,10 +6,8 @@
 [user]
 	name = alec-hs
 	email = 6503411+alec-hs@users.noreply.github.com
-	signingkey = 54ABFB9DE955FE9C69CDEB0F02C0E4987ACBC559
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHFn9ePJH18ybppSgHwF24OC222hoWMLwcd1jyWCCHlI
 [gpg]
-	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
+	format = ssh
 [commit]
 	gpgsign = true
-[core]
-	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
