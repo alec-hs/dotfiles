@@ -23,6 +23,7 @@ Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 # My Aliases 
 New-Alias open Invoke-Item
 New-Alias tf terraform
+
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
