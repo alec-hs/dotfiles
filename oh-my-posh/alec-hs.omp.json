@@ -1,6 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "Output": "",
   "blocks": [
     {
       "alignment": "left",
@@ -9,19 +8,17 @@
           "background": "#a313a8",
           "foreground": "#FFEB3B",
           "properties": {
-            "root_icon": "\u26a1",
-            "template": " \uf0e7 "
+            "root_icon": "\u26a1"
           },
           "style": "plain",
+          "template": " \uf0e7 ",
           "type": "root"
         },
         {
           "background": "transparent",
           "foreground": "#ffffff",
-          "properties": {
-            "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
-          },
           "style": "plain",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
         },
         {
@@ -32,10 +29,10 @@
             "folder_icon": "\uf6d7",
             "folder_separator_icon": "<transparent> \ue0bd </>",
             "home_icon": "\uf7db",
-            "style": "agnoster_short",
-            "template": " {{ .Path }} "
+            "style": "agnoster_short"
           },
           "style": "diamond",
+          "template": " {{ .Path }} ",
           "trailing_diamond": "\ue0b0",
           "type": "path"
         },
@@ -50,10 +47,10 @@
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "fetch_stash_count": true,
-            "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 <#FF6F00>{{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} "
+            "fetch_stash_count": true
           },
           "style": "powerline",
+          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 <#FF6F00>{{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
           "type": "git"
         },
         {
@@ -62,10 +59,10 @@
           "leading_diamond": "<transparent,#49404f>\ue0b0</>",
           "properties": {
             "style": "dallas",
-            "template": " {{ .FormattedMs }}s ",
             "threshold": 0
           },
           "style": "diamond",
+          "template": " {{ .FormattedMs }}s ",
           "trailing_diamond": "\ue0b0",
           "type": "executiontime"
         },
@@ -76,10 +73,10 @@
           "properties": {
             "display_id": true,
             "display_name": true,
-            "info_separator": " @ ",
-            "template": " \ufd03 {{ .Name }} "
+            "info_separator": " @ "
           },
           "style": "powerline",
+          "template": " \ufd03 {{ .Name }} ",
           "type": "az"
         },
         {
@@ -88,40 +85,34 @@
           "powerline_symbol": "\ue0b0",
           "properties": {
             "display_mode": "files",
-            "fetch_version": true,
-            "template": " \uf0e7 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+            "fetch_version": true
           },
           "style": "powerline",
+          "template": " \uf0e7 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
           "type": "azfunc"
         },
         {
           "background": "#7FD5EA",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
-          "properties": {
-            "template": " \ufcd1 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
-          },
           "style": "powerline",
+          "template": " \ufcd1 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
           "type": "go"
         },
         {
           "background": "#906cff",
           "foreground": "#100e23",
           "powerline_symbol": "\ue0b0",
-          "properties": {
-            "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} "
-          },
           "style": "powerline",
+          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
           "type": "python"
         },
         {
           "background": "#ebcc34",
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
-          "properties": {
-            "template": " {{ .WorkspaceName }}{{ if .Version }} {{ .Version }}{{ end }} "
-          },
           "style": "powerline",
+          "template": " {{ .WorkspaceName }}{{ if .Version }} {{ .Version }}{{ end }} ",
           "type": "terraform"
         },
         {
@@ -132,20 +123,18 @@
             "paused_icon": "\uf8e3 ",
             "playing_icon": "\ue602 ",
             "stopped_icon": "\uf04d ",
-            "template": "\uf9c6 {{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }} ",
             "track_separator": " - "
           },
           "style": "powerline",
+          "template": "\uf9c6 {{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }} ",
           "type": "spotify"
         },
         {
           "background": "#910000",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
-          "properties": {
-            "template": "<transparent> \uf12a</> {{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf42e{{ end }} "
-          },
           "style": "powerline",
+          "template": "<transparent> \uf12a</> {{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf42e{{ end }} ",
           "type": "exit"
         }
       ],
@@ -158,20 +147,18 @@
           "background": "#29315A",
           "foreground": "#43CCEA",
           "leading_diamond": "\ue0c5",
-          "properties": {
-            "template": "  {{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }}<transparent> / </>{{ .HostName }}"
-          },
           "style": "diamond",
+          "template": "  {{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }}<transparent> / </>{{ .HostName }}",
           "type": "session"
         },
         {
           "background": "#29315A",
           "foreground": "#3EC669",
           "properties": {
-            "template": "<transparent> \ue0ba\ue0bc </>{{ .CurrentDate | date .Format }} ",
             "time_format": "15:04:05"
           },
           "style": "plain",
+          "template": "<transparent> \ue0ba\ue0bc </>{{ .CurrentDate | date .Format }} ",
           "type": "time"
         }
       ],
@@ -187,10 +174,10 @@
             "{{ if gt .Code 0 }}#ff0000{{ end }}"
           ],
           "properties": {
-            "always_enabled": true,
-            "template": "\u276f{{ if gt .Code 0 }}\uf00d{{ else }}\uf42e{{ end }} "
+            "always_enabled": true
           },
           "style": "plain",
+          "template": "\u276f{{ if gt .Code 0 }}\uf00d{{ else }}\uf42e{{ end }} ",
           "type": "exit"
         }
       ],
@@ -199,5 +186,5 @@
   ],
   "console_title_template": "{{if .Root}} \u26a1 {{end}}{{.Folder | replace \"~\" \"🏚\" }} @ {{.Host}}",
   "osc99": true,
-  "version": 1
+  "version": 2
 }
