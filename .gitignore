@@ -1,2 +1,3 @@
 pwsh/profile.ps1
 pwsh/Modules/VMware*
+pwsh/Modules/PSGraph*
