@@ -18,7 +18,6 @@ rm ~/.poshthemes/themes.zip
 
 # Add Oh My Posh to .bashrc
 echo 'eval "$(oh-my-posh init bash --config ~/.dotfiles/oh-my-posh/alec-hs.omp.json)"' >> ~/.bashrc
-exec bash
 
 # Link git config file
 ln -s ~/.dotfiles/git/linux/.gitconfig ~/.gitconfig
@@ -56,7 +55,8 @@ git config --global user.signingkey $keyid
 
 # Display public key
 cat << EOM
-######                        INFO                        ######
+
+######                        START INFO                        ######
 This is your public key.
 
 It is also saved in the following location:
@@ -65,6 +65,9 @@ It is also saved in the following location:
 
 $pub
 
-######                        END                         ######
+When you are done run 'exec bash' to reload your bashrc.
+
+######                         END INFO                         ######
+
 EOM
 
