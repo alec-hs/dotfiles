@@ -2,27 +2,18 @@
 
 # Update and install basic packages
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install zsh zplug net-tools -y
+sudo apt install wget net-tools python3 unzip -y
 
-# Install oh-my-zsh & plugins
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
-git clone https://github.com/supercrabtree/k ~/.oh-my-zsh/custom/plugins/k
-git clone https://github.com/agkozak/zsh-z ~/.oh-my-zsh/custom/plugins/zsh-z
+# Oh My Posh install
+sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+sudo chmod +x /usr/local/bin/oh-my-posh
 
-# Create z file
-touch ~/.z
+# Oh My Posh themes
+mkdir ~/.poshthemes
+wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip
+unzip ~/.poshthemes/themes.zip -d ~/.poshthemes
+chmod u+rw ~/.poshthemes/*.omp.*
+rm ~/.poshthemes/themes.zip
 
-# Delete exsting dotfiles
-rm -f ~/.zshrc
-rm -f ~/.p10k.zsh
-
-# Create Symlinks
-ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
-
-# Set default shell
-chsh -s $(which zsh)
+# Add Oh My Posh to .bashrc
+echo 'eval "$(oh-my-posh init bash --config ~/.dotfiles/oh-my-posh/alec-hs.omp.json)"' >> ~/.bashrc
