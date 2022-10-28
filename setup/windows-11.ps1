@@ -4,7 +4,7 @@
 
 # Add needed modules
 Import-Module "~\.dotfiles\pwsh\Modules\Core-Functions\Core-Functions.psm1"
-Import-Module "~\.dotfiles\pwsh\Modules\Core-Functions\Core-Functions.psm1"
+Import-Module "~\.dotfiles\pwsh\Modules\Install-Fonts\Install-Fonts.psm1"
 
 
 #------------------------------#
