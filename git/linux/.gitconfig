@@ -6,7 +6,5 @@
 [user]
 	name = alec-hs
 	email = 6503411+alec-hs@users.noreply.github.com
-[gpg]
-	format = ssh
 [commit]
 	gpgsign = true
