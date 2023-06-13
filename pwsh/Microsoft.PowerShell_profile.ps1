@@ -23,6 +23,7 @@ Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 # My Aliases 
 New-Alias open Invoke-Item
 New-Alias tf terraform
+New-Alias py37 "C:\Program Files\Python37\python.exe"
 
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
