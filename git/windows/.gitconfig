@@ -6,10 +6,16 @@
 [user]
 	name = alec-hs
 	email = 6503411+alec-hs@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHFn9ePJH18ybppSgHwF24OC222hoWMLwcd1jyWCCHlI
 [gpg]
 	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
+	format = ssh
 [commit]
 	gpgsign = true
 [core]
 	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
 	editor = \"C:\\Users\\alec-hs\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+[gpg "ssh"]
+	program = C:\\Program Files\\1Password\\app\\8\\op-ssh-sign.exe
+[credential "https://gitea.kestrel.network"]
+	provider = generic

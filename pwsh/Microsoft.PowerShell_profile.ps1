@@ -20,6 +20,9 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
+# My Functions
+function src { Set-Location "C:\Users\alec-hs\OneDrive\Source" }
+
 # My Aliases 
 New-Alias open Invoke-Item
 New-Alias tf terraform

@@ -5,3 +5,12 @@ pwsh/Modules/PSGraph*
 
 # Ignore .bak files
 *.bak
+
+# Ignore .ssh files that should not be tracked
+ssh/*.pem
+ssh/*.key
+ssh/*.crt
+ssh/*.csr
+ssh/*.pfx
+ssh/*.p12
+ssh/known_hosts*

@@ -1,0 +1,6 @@
+Host *
+	ForwardAgent yes
+
+Host clp-*
+    CanonicalDomains kestrel.network
+    CanonicalizeHostname yes
